@@ -1,0 +1,51 @@
+airportName,airportCode,airportAddress.streetAddress,airportAddress.city,airportAddress.state,airportAddress.country.countryName,airportAddress.country.countryCode
+Murtala Muhammed International Airport - Lagos,LOS,MayBay,Abi,Cross River,Nigeria,NG
+Nnamdi Azikiwe International Airport,ABV,Airport Road,Abuja,Federal Capital Territory,Nigeria,NG
+Port Harcourt International Airport,PHC,Omagwa,Port Harcourt,Rivers,Nigeria,NG
+Mallam Aminu Kano International Airport,KAN,Airport Road,Kano,Kano,Nigeria,NG
+Akanu Ibiam International Airport,ENU,Emene,Enugu,Enugu,Nigeria,NG
+Margaret Ekpo International Airport,CBQ,Airport Road,Calabar,Cross River,Nigeria,NG
+Yakubu Gowon Airport,JOS,Airport Road,Jos,Plateau,Nigeria,NG
+Maiduguri International Airport,MIU,Airport Road,Maiduguri,Borno,Nigeria,NG
+Benin Airport,BNI,Airport Road,Benin City,Edo,Nigeria,NG
+Kaduna Airport,KAD,Airport Road,Kaduna,Kaduna,Nigeria,NG
+Ilorin International Airport,ILR,Airport Road,Ilorin,Kwara,Nigeria,NG
+Ibadan Airport,IBA,Airport Road,Ibadan,Oyo,Nigeria,NG
+Akure Airport,AKR,Airport Road,Akure,Ondo,Nigeria,NG
+Minna Airport,MXJ,Airport Road,Minna,Niger,Nigeria,NG
+Sadiq Abubakar III International Airport,SKO,Airport Road,Sokoto,Sokoto,Nigeria,NG
+Gusau Airport,QUS,Airport Road,Gusau,Zamfara,Nigeria,NG
+Makurdi Airport,MDI,Airport Road,Makurdi,Benue,Nigeria,NG
+Zaria Airport,ZAR,Airport Road,Zaria,Kaduna,Nigeria,NG
+Yola Airport,YOL,Airport Road,Yola,Adamawa,Nigeria,NG
+Katsina Airport,DKA,Airport Road,Katsina,Katsina,Nigeria,NG
+Warri Airport,QRW,Airport Road,Warri,Delta,Nigeria,NG
+Osubi Airstrip,ABJ,Airport Road,Warri,Delta,Nigeria,NG
+Uyo Airport,QUO,Airport Road,Uyo,Akwa Ibom,Nigeria,NG
+Bauchi Airport,BCU,Airport Road,Bauchi,Bauchi,Nigeria,NG
+Asaba Airport,ABB,Airport Road,Asaba,Delta,Nigeria,NG
+Owerri Airport,QOW,Airport Road,Owerri,Imo,Nigeria,NG
+Gombe Lawanti International Airport,GMO,Airport Road,Gombe,Gombe,Nigeria,NG
+Jalingo Airport,JAL,Airport Road,Jalingo,Taraba,Nigeria,NG
+Anambra International Airport,ANA,Airport Road,Umueri,Anambra,Nigeria,NG
+Birnin Kebbi Airport,BNY,Airport Road,Birnin Kebbi,Kebbi,Nigeria,NG
+Ekiti Airport,EKT,Airport Road,Ado-Ekiti,Ekiti,Nigeria,NG
+Ebonyi Airport,EBO,Airport Road,Abakaliki,Ebonyi,Nigeria,NG
+Ado-Ekiti Airport,ADK,Airport Road,Ado-Ekiti,Ekiti,Nigeria,NG
+Auchi Airport,AUC,Airport Road,Auchi,Edo,Nigeria,NG
+Calabar Margaret Ekpo International Airport,CAL,Airport Road,Calabar,Cross River,Nigeria,NG
+Enugu Airport,ENU,Airport Road,Enugu,Enugu,Nigeria,NG
+Funtua Airport,FTU,Airport Road,Funtua,Katsina,Nigeria,NG
+Gusau Airport,QUS,Airport Road,Gusau,Zamfara,Nigeria,NG
+Ibadan Airport,IBA,Airport Road,Ibadan,Oyo,Nigeria,NG
+Igbinedion Airport,IGB,Airport Road,Benin City,Edo,Nigeria,NG
+Ilorin Airport,ILR,Airport Road,Ilorin,Kwara,Nigeria,NG
+Kano Mallam Aminu International Airport,KAN,Airport Road,Kano,Kano,Nigeria,NG
+Katsina Airport,DKA,Airport Road,Katsina,Katsina,Nigeria,NG
+Lagos Airport,LOS,Airport Road,Lagos,Lagos,Nigeria,NG
+Makurdi Airport,MDI,Airport Road,Makurdi,Benue,Nigeria,NG
+Minna Airport,MXJ,Airport Road,Minna,Niger,Nigeria,NG
+Nnamdi Azikiwe International Airport,ABV,Airport Road,Abuja,Federal Capital Territory,Nigeria,NG
+Osubi Airstrip,ABJ,Airport Road,Warri,Delta,Nigeria,NG
+Port Harcourt International Airport,PHC,Airport Road,Port Harcourt,Rivers,Nigeria,NG
+Warri Airport,QRW,Airport Road,Warri,Delta,Nigeria,NG
