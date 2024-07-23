@@ -1,14 +1,15 @@
-package com.cpip.applicationrunner;
+package com.cpip.ApplicationRunner;
 
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ThreadPoolExecutor;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+
 import org.springframework.core.io.FileSystemResource;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,9 +19,10 @@ public class CsvToJsonConverter {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public void convertCsvToJson(FileSystemResource file, ThreadPoolTaskExecutor taskExecutor, String endpointUrl) throws Exception {
+    public void convertCsvToJson(FileSystemResource file, ThreadPoolExecutor taskExecutor, String endpointUrl, String httpMethod, String bearerToken) throws Exception {
         CSVParser parser = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(new InputStreamReader(file.getInputStream()));
 
+        long recordCount = 0;
         for (CSVRecord record : parser) {
             Map<String, Object> recordMap = new HashMap<>();
             for (String header : parser.getHeaderNames()) {
@@ -34,8 +36,13 @@ public class CsvToJsonConverter {
             }
             String json = objectMapper.writeValueAsString(recordMap);
             System.out.println(json);
-            taskExecutor.execute(new JsonSenderTask(json, endpointUrl));
-            
+            taskExecutor.execute(new JsonSenderTask(json, endpointUrl, httpMethod, bearerToken));
+
+
+            recordCount++;
         }
+
+        // Log the total number of records processed
+        System.out.println("Total number of records processed: " + recordCount);
     }
 }
