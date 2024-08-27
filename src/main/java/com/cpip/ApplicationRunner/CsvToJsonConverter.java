@@ -4,14 +4,11 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ThreadPoolExecutor;
-
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Component;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Component
@@ -26,19 +23,19 @@ public class CsvToJsonConverter {
         for (CSVRecord record : parser) {
             Map<String, Object> recordMap = new HashMap<>();
             for (String header : parser.getHeaderNames()) {
-                String[] nestedKeys = header.split("\\.");
-                Map<String, Object> currentMap = recordMap;
-                for (int i = 0; i < nestedKeys.length - 1; i++) {
-                    currentMap.computeIfAbsent(nestedKeys[i], k -> new HashMap<>());
-                    currentMap = (Map<String, Object>) currentMap.get(nestedKeys[i]);
+                String value = record.get(header);
+                // Check if the value contains multiple items separated by a delimiter (e.g., comma)
+                if (value.contains(",")) {
+                    // Split the value into a list if it contains multiple items
+                    String[] values = value.split(",");
+                    recordMap.put(header, values);
+                } else {
+                    recordMap.put(header, value);
                 }
-                currentMap.put(nestedKeys[nestedKeys.length - 1], record.get(header));
             }
             String json = objectMapper.writeValueAsString(recordMap);
             System.out.println(json);
             taskExecutor.execute(new JsonSenderTask(json, endpointUrl, httpMethod, bearerToken));
-
-
             recordCount++;
         }
 
